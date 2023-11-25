@@ -58,3 +58,14 @@ solve(-1);
 solve('ksjlas'); //e.g. if we do it that way it will give undefined;
 solve('3.5'); //e.g. if we do it that way it will give undefined;
 */
+
+
+//an interesting question, what about if we have e.g. solve([3]), instead of solve(3);
+//then we do as following:
+//   function solve (input){
+//
+//       let index = input[0]; //and the rest will work exactly the same way as examples above
+//
+//   }
+//
+//   solve([3]);
