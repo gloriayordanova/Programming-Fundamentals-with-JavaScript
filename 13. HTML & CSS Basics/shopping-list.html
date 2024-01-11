@@ -1,3 +1,6 @@
+!!!!!!!!!!!!!!!!!!!! I downloaded the Live Server Extension and to see how it is working click save, right butto and select "Open with Live Server"
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,17 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="shopping-list-style.css" />    //here we connect the HTML with the CSS file shopping-list-style.css
     <title>Shopping List</title>
+    <style>
+        h2 {
+            text-decoration: underline;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Shopping List</h1>
 
+    <img src = "sadfasdafsd.gafdfa" alt="asads" />
+    <a href = "google.com">google</a>  (if I want to make the below ones href as block elements, so every one on a different line, I go to css and do a{
+        display: block;
+        background-color: lightblue (in that case if I want to put any background colour for the word)
+    })
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <a href = "google.com">google</a>
+    <p>google paragraph</p>
+
     <ul> //ul + tab means unordered list for data that is unordered e.g. it shows it as dots e.g. .     .       .   for listing diffferent items
         <li>Milk</li>  //li + tab we tag every individual list item (li comes from list item)
         <li>Bread</li>  
-        <li>Apples</li>  
+        <li style="font-family: fantasy">Apples</li>  
     </ul>      
 
     <h2>Movies</h2>
+    <ol class="movie-list">
     <ol> //ol + tab means ordered list for data that is ordered e.g. it shows it as figures e.g. 1     2       3   for listing diffferent items
         <li>Man of Steel</li> //li + tab we tag every individual list item (li comes from list item)
         <li>The Matrix</li>
@@ -23,3 +48,24 @@
     </ol> 
 </body>
 </html>
+
+
+
+
+
+/* above ones are examples by tags or elements //also we can do by class like e.g 
+<div class="site-content"> 
+*we can select here all the hq, ul, li etc
+</>
+and in the CSS file we write
+.site-content {
+    width: 400px
+    margin: auto
+} */
+
+/* we can also do it by id like (and only something specific can be marked e.g. with colour gold with css)
+<li id="best-movie">Man of Steel</li>
+and in the css file we write
+#best-movie{
+    color: gold;
+} */

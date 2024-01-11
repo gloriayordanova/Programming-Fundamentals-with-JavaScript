@@ -15,19 +15,6 @@ li{
     margin-bottom: 10px;
 }
 
-/* above ones are examples by tags or elements //also we can do by class like e.g 
-<div class="site-content"> 
-*we can select here all the hq, ul, li etc
-</>
-and in the CSS file we write
-.site-content {
-    width: 400px
-    margin: auto
-} */
-
-/* we can also do it by id like (and only something specific can be marked e.g. with colour gold with css)
-<li id="best-movie">Man of Steel</li>
-and in the css file we write
-#best-movie{
-    color: gold;
-} */
+.movie-list {
+    margin-left: 100px;
+}
