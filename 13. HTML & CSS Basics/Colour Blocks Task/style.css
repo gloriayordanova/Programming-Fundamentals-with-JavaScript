@@ -1,0 +1,28 @@
+div {
+    display: inline-block;
+}
+
+.site-content {   // for some reason this is not working, the end result should have been as per screnshot "Colour Blocks screenshot" which would have made them 2 per line and orange block at the end.
+    width: 200 px;
+    margin: auto;  // this marging is not workin as well like moving them to the center, but all good
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
