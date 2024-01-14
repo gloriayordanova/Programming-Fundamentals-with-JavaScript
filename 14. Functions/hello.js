@@ -29,7 +29,7 @@ function countdown(){
     }
 }
 
-countdown();
+countdown(10);
 
 
 
