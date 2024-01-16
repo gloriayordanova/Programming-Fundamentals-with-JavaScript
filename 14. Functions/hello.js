@@ -41,7 +41,7 @@ function countdown(){
     }
 }
 let result = countdown(10);
-console.log(result); // the result will be that we will see the same output as the above example but with underfined at the end (GY: print to see what will happen)
+console.log(result); // the result will be that we will see the same output as the above example but with underfined at the end (GY: print to see what will happen); if we use return (see somewhere in examples below, we won't get result as undefined)
 
 
 
