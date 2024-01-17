@@ -72,3 +72,15 @@ function printName(nameArr){   //this is another example with return
     return nameArr[0] + ' ' + nameArr[1];
 }
 console.log(printName(['John', 'Smith'])); //in that example if we do do console.log like thathere we will see "John Smith" printed
+
+
+
+function isValid(index, arr){
+    if(Number.isInteger(index) && index >= 0 && index < arr.length) {
+        return true;
+    } else {
+        return false
+    }
+}
+console.log(isValid(2, [1, 2, 3]));    // here will return true
+console.log(isValid(2, [1, 2]));    // here will return false

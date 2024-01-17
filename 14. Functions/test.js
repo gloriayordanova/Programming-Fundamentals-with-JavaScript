@@ -1,4 +1,9 @@
-function printName(nameArr){   //this is another example with return
-    return nameArr[0] + ' ' + nameArr[1];
+function isValid(index, arr){
+    if(Number.isInteger(index) && index >= 0 && index < arr.length){
+        return true;
+    } else {
+        return false;
+    }
 }
-printName(['John', 'Smith']); //in that example if we don't do console.log here we will not see anything printed
+console.log(isValid(2, [1, 2, 3]));
+iconsole.log(isValid(2, [1, 2]));
