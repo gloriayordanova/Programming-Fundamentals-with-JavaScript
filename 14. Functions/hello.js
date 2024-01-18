@@ -84,3 +84,11 @@ function isValid(index, arr){
 }
 console.log(isValid(2, [1, 2, 3]));    // here will return true
 console.log(isValid(2, [1, 2]));    // here will return false
+
+
+
+function pass(grade){
+    return grade >= 3;
+}
+console.log(pass(2));
+console.log(pass(3));

@@ -1,9 +1,12 @@
-function isValid(index, arr){
-    if(Number.isInteger(index) && index >= 0 && index < arr.length){
-        return true;
-    } else {
-        return false;
+function repeat(str, n){
+    let result = '';
+
+    for(let i = 0; i < n; i++){
+        result += str;
     }
+
+    return result;
 }
-console.log(isValid(2, [1, 2, 3]));
-iconsole.log(isValid(2, [1, 2]));
+
+console.log(repeat("abc", 5));
+console.log(repeat("String", 2));
