@@ -1,12 +1,5 @@
-function repeat(str, n){
-    let result = '';
+// let result = "abc".repeat(5);
+// console.log(result);
 
-    for(let i = 0; i < n; i++){
-        result += str;
-    }
-
-    return result;
-}
-
-console.log(repeat("abc", 5));
-console.log(repeat("String", 2));
+let result = "abc".repeat(5);
+console.log(result);
