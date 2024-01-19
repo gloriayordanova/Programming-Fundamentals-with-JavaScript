@@ -1,4 +1,4 @@
-function power(n, exponent){
+function power(n, exponent){   //Also, when I debug good to look at the "Call Stack" about what it is hapening
     let product = 1;    // here we start with 0 as for example 2 ** 0 = 1;
 
     for(let i = 0; i < exponent; i++){
@@ -10,6 +10,21 @@ function power(n, exponent){
 }
 // power(2, 8);
 // power(3, 4);
+
+
+
+/*   showing us about recursion (watch video from 1:25:53), this is more advanced, so no need to remember, but just to see how it is happening. Also, when I debug good to look at the "Call Stack" about what it is hapening
+function recursivePower(n, exponent){
+    if(exponent == 0){
+        return 1;
+    } else {
+        return n * recursivePower(n, exponent - 1);
+    }
+}
+console.log(recursivePower(2, 8));
+console.log(recursivePower(3, 4));
+console.log(recursivePower(4, 5));
+*/
 
 
 
