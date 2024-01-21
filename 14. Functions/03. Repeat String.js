@@ -49,3 +49,19 @@ function repeat(str, n){
 repeat("abc", 5);
 repeat("String", 2);
 */
+
+
+
+/*   another way with the arrow function will look like
+    (str, n) => {
+    let result = '';
+
+    for(let i = 0; i < n; i++){
+        result += str;
+    }
+
+    return result;
+}
+// console.log(("abc", 5));
+// console.log(("String", 2));
+*/
