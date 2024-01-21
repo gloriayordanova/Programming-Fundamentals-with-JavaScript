@@ -92,3 +92,6 @@ function pass(grade){
 }
 console.log(pass(2));
 console.log(pass(3));
+
+
+
