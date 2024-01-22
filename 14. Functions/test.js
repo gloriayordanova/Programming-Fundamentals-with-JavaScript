@@ -1,16 +1,25 @@
 function solve(a, b, operator){
-    if(operator == 'add'){
-        console .log(a + b);
-    } else if (operator == 'subtract'){
-        console.log(a - b);
-    } else if (operator == 'multiply'){
-        console.log(a * b);
-    } else if (operator == 'divide'){
-        console.log(a / b);
-    }
-}
+    let result;
 
+    switch(operator){
+        case 'add':
+            result = a + b;
+            break;
+        case 'subtract':
+            result = a - b;
+            break;
+        case 'multiply':
+            result = a * b;
+            break;
+        case 'divide':
+            result = a / b;
+            break;
+    }
+
+    console.log(result);
+    
+}
 solve(5, 3, 'add');           
 solve(7, 1, 'subtract');      
 solve(5, 10, 'multiply');  
-solve(21, 3, 'divide');           
+solve(21, 3, 'divide'); 
