@@ -1,37 +1,34 @@
-// function solve(a, b, operator){
-//     let add = (a, b) => a + b;
-//     let subtract = (a, b) => a - b;
-//     let multiply = (a, b) => a * b;
-//     let divide = (a, b) => a / b;
+function solve(a, b, operator){
+    let operations = [
+        (a, b) => a + b,
+        (a, b) => a - b,
+        (a, b) => a * b,
+        (a, b) => a / b
+    ];
 
-//     let operations = [
-//         add,
-//         subtract,
-//         multiply,
-//         divide
-//     ];
+    let operationNames = [
+        'add',
+        'subtract',
+        'multiply',
+        'divide'
+    ];
 
-//     let operation;
+    let index; 
 
-//     switch (operator){
-//         case 'add':
-//             operation = operations[0];
-//             break;
-//         case 'subtract':
-//             operation = operations[1];
-//             break;
-//         case 'multiply':
-//             operation = operations[2];
-//             break;
-//         case 'divide':
-//             operation = operations[3];
-//             break;
-//     }
+    for(let i = 0; i < operationNames.length; i++){
+        if(operationNames[i] == operator) {
+            index = i;
+        }
+    }
 
-//     console.log(operation(a, b));
-// }
+    let operation = operations[index];
+    console.log(operation(a, b));
+}
 
-// solve(5, 3, 'add');           
-// solve(7, 1, 'subtract');      
-// solve(5, 10, 'multiply');  
-// solve(21, 3, 'divide');
+solve(5, 3, 'add');           
+solve(7, 1, 'subtract');      
+solve(5, 10, 'multiply');  
+solve(21, 3, 'divide');
+
+
+    
