@@ -1,19 +1,21 @@
-// function findSmallestNum(num1, num2, num3) {;
+// function addAndSubtract(num1, num2, num3){  
+//     let result1 = sum(num1, num2);
+//     let result2 = subtract(result1, num3);
 
-//     let smallest = num1;
-  
-//     let numbers = [num1, num2, num3];
-  
-//     for (let i = 1; i < numbers.length; i++) {
-//       if (numbers[i] < smallest) {
-//         smallest = numbers[i];
-//       }
+//     console.log(result2);
+
+//     function sum(num1, num2){  
+//         return num1 + num2;
 //     }
-  
-//     return smallest;
-//   }
-  
-//   console.log(findSmallestNum(2, 5, 3));    
-//   console.log(findSmallestNum(600, 342, 123)); 
-//   console.log(findSmallestNum(25, 21, 4));    
-//   console.log(findSmallestNum(2, 2, 2));
+
+//     function subtract(num1, num2){   
+//         return num1 - num2;
+//     }
+// }
+
+// addAndSubtract(23, 6, 10);
+// addAndSubtract(1, 17, 30);
+// addAndSubtract(42, 58, 100);
+
+
+
