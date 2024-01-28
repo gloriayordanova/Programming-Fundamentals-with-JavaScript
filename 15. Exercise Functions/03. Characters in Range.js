@@ -1,6 +1,6 @@
 //this sentence "Keep in mind that the second character code might be before the first one inside the ASCII table", here it is meant instsead of 'a'    'd', sometimes it might be between 'd'       'a
 function charactersInRange(char1, char2){
-    let code1 = char1.charCodeAt(0);
+    let code1 = char1.charCodeAt(0);  // char1.charCodeAt(0) is the same as char1.charCodeAt()
     let code2 = char2.charCodeAt(0);
 
     let minCode = Math.min(code1, code2);  // we add thhis at the end because of that which is required in the 3rd example charactersInRange('C', '#');
