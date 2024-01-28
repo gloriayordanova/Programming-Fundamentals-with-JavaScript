@@ -19,9 +19,27 @@ function addAndSubtract(num1, num2, num3){
 
 
 
+/*
+function addAndSubtract(num1, num2, num3){ //here the same result, using arrow functions
+    
+    let sum = (a, b) => a + b;
+    let subtract = (a, b) => a - b;
+
+    let result1 = sum(num1, num2);    
+    let result2 = subtract(result1, num3);
+
+    console.log(result2);
+}
+
+addAndSubtract(23, 6, 10);
+addAndSubtract(1, 17, 30);
+addAndSubtract(42, 58, 100);
+*/
+
+
 
 /*
-function addAndSubtract(num1, num2, num3){      //GY: this solution is also right, but I did it with 1 function only (not as what the task asks us for, but still useful to se), but not 2 functions
+function addAndSubtract(num1, num2, num3){      //GY: this solution is also right, but I did it with 1 function only (not as what the task asks us for, but still useful to see), but not 2 functions
 
     function subtract(a, b, c){
         return a + b - c; 
@@ -34,6 +52,6 @@ function addAndSubtract(num1, num2, num3){      //GY: this solution is also righ
 }
 
 console.log(addAndSubtract(23, 6, 10));
-addAndSubtract(1, 17, 30);
-addAndSubtract(42, 58, 100);
+console.log(addAndSubtract(1, 17, 30));
+console.log(addAndSubtract(42, 58, 100));
 */
