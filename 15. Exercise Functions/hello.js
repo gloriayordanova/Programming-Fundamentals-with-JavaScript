@@ -1,27 +1,30 @@
 function oddAndEvenSum(num){
-    let evenSum = 0;
-    let oddSum = 0; 
+    let numAsStr = num.toString();   
 
-    let numAsStr = num.toString();   //here we convert to string because in that example we can't find each of the elements e.g. 1 0 0 0 4 3 5, sowe need to convert it to string) //num.toString() will be the same as String(num);
+    let evenOddSums = calcEvenOddSum(numAsStr);
+
+    console.log(`Odd sum = ${evenOddSums[1]}, Even sum = ${evenOddSums[0]}`); 
+
+    function calcEvenOddSum(str){
+        let evenSum = 0;
+        let oddSum = 0; 
+
+        for (let char of str){
+            let digit = Number(char); 
     
-    for (let char of numAsStr){
-        // console.log(char);  if we console.log it we will see each of them on a different line as a string 
-        //e.g. 1
-        //e.g. (3)0
-        //e.g. 4
-        //e.g. 3
-        //e.g. 5
-        let digit = Number(char); //what we do here is we convert from string to num again
-
-        if (digit % 2 == 0){
-            evenSum += digit;
-        } else {
-            oddSum += digit;
+            if (digit % 2 == 0){
+                evenSum += digit;
+            } else {
+                oddSum += digit;
+            }
         }
-    }
 
-    console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`);
+        return [evenSum, oddSum];  //here showing we can return array in a function
+    }
 }
 
 oddAndEvenSum(1000435);
 oddAndEvenSum(3495892137259234);
+
+
+
