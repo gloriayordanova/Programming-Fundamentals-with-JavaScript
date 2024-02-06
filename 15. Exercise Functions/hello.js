@@ -24,8 +24,6 @@ palindromeInts([123,323,421,121]);
 
 function palindromeInts(arr){
 
-
-
 }
 
 palindromeInts([123,323,421,121]);
