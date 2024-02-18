@@ -15,6 +15,6 @@ function perfectNum(num){
 
 }
 
-// perfectNum(6);
-// perfectNum(28);
-// perfectNum(1236498);
+perfectNum(6);
+perfectNum(28);
+perfectNum(1236498);
