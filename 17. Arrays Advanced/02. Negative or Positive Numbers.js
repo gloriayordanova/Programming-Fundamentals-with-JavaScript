@@ -11,12 +11,12 @@ function solve(arr){
         }
     }
 
-    for(let num of result){   // or alternative of that is I can just do console.log(result.join('\n'));   and that\n will make each element to a new line
+    for(let num of result){   // here we do it in order to move each num to a new line as we should do per task description // or alternative of that is I can just do console.log(result.join('\n'));   and that\n will make each element to a new line
         console.log(num);
     }
 }
 
-// solve(['7', '-2', '8', '9']);
+solve(['7', '-2', '8', '9']);
 // solve(['3', '-2', '0', '-1']);
 
 
