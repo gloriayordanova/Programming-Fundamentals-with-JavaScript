@@ -1,6 +1,6 @@
 //example of includes()
 let arr = [10, 20, 30, 40, 50];
-console.log(includes(arr, 20));  // we write inclides(arr, 20) and at the end we add that console log in front of it. 
+console.log(includes(arr, 20));  // we write includes(arr, 20) and at the end we add that console log in front of it. 
 
 function includes(inputArr, element){   //we first start with this function
     for(let item of inputArr){
