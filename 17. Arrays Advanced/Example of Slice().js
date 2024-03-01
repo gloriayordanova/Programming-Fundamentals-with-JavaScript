@@ -4,7 +4,7 @@ console.log(slice(arr, 1, 3));     // in that case it will print [20, 30], becau
 function slice(inputArr, start, end){
     let result = [];
 
-    for(let i = start; i < end; i++){      
+    for(let i = start; i < end; i++){  // we do i < end, because same as above in that case it will print [20, 30], because we know slice works that way, e.g. it always deletes the last figure from the array, this is why it only copies [20, 30] as a result
         result.push(inputArr[i]);
     }
 
@@ -26,9 +26,19 @@ function slice(inputArr, start, end){
         end += inputArr.legth;
     }
 
-    for(let i = start; i < end; i++){      
-        result.push(inputArr[i]);
+    for(let i = start; i < end; i++){  // we start writing the code from here    
+        result.push(inputArr[i]);       //another way to write this line can be result[result.length] = inputArr[i];
     }
 
     return result;
 }
+
+
+
+
+
+
+
+
+
+
