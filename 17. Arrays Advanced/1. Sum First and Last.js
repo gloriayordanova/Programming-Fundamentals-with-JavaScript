@@ -5,8 +5,8 @@ function solve(arr){
     console.log(Number(first) + Number(last));    
 }
 
-// solve(['5', '10']);
-// solve(['20', '30', '40']);
+solve(['5', '10']);
+solve(['20', '30', '40']);
 
 /* 
 !!!!!!!!!!!!! In Arrays:
@@ -22,4 +22,5 @@ if I console.log(arr.slice()) then it will make a copy of the whole array e.g. [
 Also, we have for example again let arr = [10, 20, 30, 40, 50] if we do console.log(arr.slice(1, - 1) it will show [20, 30, 40] (when we have minus values it counts from right to left, but not left to right direction)
 if we do console.log(arr.slice(-3, - 2) we will get as a result only [30];
 if we do console.log(arr.slice(-2, -3) we will get as a result [];
+splice() - see sheet Examples of Splice();
 */
