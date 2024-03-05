@@ -24,4 +24,5 @@ if we do console.log(arr.slice(-3, - 2) we will get as a result only [30];
 if we do console.log(arr.slice(-2, -3) we will get as a result [];
 splice() - see sheet Examples of splice();
 map() - see sheet Examples of map();
+filter() - see sheet Examples of filter();
 */
