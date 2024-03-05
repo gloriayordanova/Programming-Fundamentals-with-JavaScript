@@ -1,6 +1,7 @@
 let arr = [10, 20, 30, 40, 50, 60];
 
 console.log(arr.filter(x => true)); // or it is the same result if we do console.log(arr.filter(() => true));
+//just for info, if we have arr.filter((x, i) => sth) so x is the element where i is the index (FYI this is also relevant with the map. where (x, i) and x should be the element and i will be the index)
 
 
 
