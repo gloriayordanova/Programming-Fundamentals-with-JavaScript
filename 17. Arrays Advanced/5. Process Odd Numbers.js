@@ -10,7 +10,7 @@ function solve(arr){
     console.log(result);
 }
 
-// solve([10, 20, 30, 40, 50, 60]);
+solve([10, 20, 30, 40, 50, 60]);
 
 
 
@@ -27,23 +27,6 @@ solve([10, 20, 30, 40, 50, 60]);
 
 /*
 //same as above, the the practice is to be recorded like that
-function solve(arr){ 
-    console.log(
-        arr
-            .filter((x, i) => i % 2 != 0)
-            .map(x => x * 2)
-            .reverse()
-            .join(' ')
-    );
-}
-
-solve([10, 20, 30, 40, 50, 60]);
-*/
-
-
-
-/*
-//similar to above, but written in another way
 function solve(arr){ 
     console.log(
         arr
