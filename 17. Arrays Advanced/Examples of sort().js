@@ -7,10 +7,11 @@ console.log(arr);
 
 
 
+// !!!!!!!!! maybe the below example, no need to worry about because I didn't quite get it and maybe won't be that important 
 let arr = [3, 5, 1, 7, 0, 11]; //if we add 11, we see now they are note sorted corectly [ 0, 1, 11, 3, 5, 7 ] because it sorts the using ASCII code
 
 console.log(arr);
-arr.sort(compare); //first write the function above, then later add here (compare)
+arr.sort(compare); //first write the function below, then later add here (compare)
 
 console.log(arr);
 
@@ -31,7 +32,7 @@ function compare (a, b){
 let arr = [3, 5, 1, 7, 0, 11]; 
 
 console.log(arr);
-arr.sort(compare); 
+arr.sort(compare); //first write the function below, then later add here (compare)
 
 console.log(arr);
 
@@ -58,17 +59,17 @@ function compare (a, b){
 let arr = [3, 5, 1, 7, 0, 11]; //here showing that we can also summarise it
 
 console.log(arr);
-arr.sort(compare); 
+arr.sort(); 
 
 console.log(arr);
 
-(a, b) => a - b;
+(a, b) => a - b;   // or (a, b) => b - a;
 
 // and we can even do it
 
 let arr = [3, 5, 1, 7, 0, 11]; //here showing that we can also summarise it
 
 console.log(arr);
-arr.sort((a, b) => a - b); 
+arr.sort((a, b) => a - b);   //or arr.sort((a, b) => b - a);
 
 console.log(arr);
