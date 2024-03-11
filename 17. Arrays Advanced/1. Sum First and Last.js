@@ -26,4 +26,5 @@ splice() - see sheet Examples of splice();
 map() - see sheet Examples of map();
 filter() - see sheet Examples of filter();
 sort() - see sheet Examples of sort();
+localeCompare() - see sheet Examples of localeCompare();
 */
