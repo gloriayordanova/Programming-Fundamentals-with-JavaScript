@@ -8,7 +8,7 @@ function houseParty(arr){
         if(tokens.includes('not')){
             if(guests.includes(name)){   //here if somebody is not going and is in the list, the question is how we will remove that person, so see below. e.g. if we have [Jane, Tim, Max] and we want to delete Tim, we want to know which index Tim is in
                 let index = guests.indexOf(name);  //with that indexOf(name) we want to understand what index the current guest is in
-                guests.splice(index, 1)  // on the current index we want to delete 1 element
+                guests.splice(index, 1)  // on the current index we want to remove 1 element
             } else { //here if somebody is not going and is in not the list
                 console.log(`${name} is not in the list!`);
             }
