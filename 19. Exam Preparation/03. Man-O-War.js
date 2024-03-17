@@ -1,7 +1,38 @@
-function solve() {
+function solve(input) {
     // parse input, removing elements
     // - split first two elements and create pirate ship and man-o-war status arrays
     // - parse max helath from third element
+    let pirate = input.shift().split('>').map(Number);
+    let warship = input.shift().split('>').map(Number);
+    let maxHp = Number(input.shift());
+
+    console.log(pirate, warship, maxHp);
+    console.log(input);
+
+    for(let current of input){ //here we do with for of as we don't need the index, for of loop is better than a standard loop
+        let tokens = current.split(' ');
+        let command = tokens.shift();
+
+        if(command == 'Retire'){
+            break;  //break stops the whole loop and goes down the loop
+        } else if (command == 'Fire') {
+            let index = Number(tokens[0]);
+            let damage = Number(tokens[1]);
+            
+            if(index < 0 || index >= warship.length) {
+                continue;  // continue what will do is it will stop the rest of the code, but it will do the next loop of the for loop above
+            }
+
+            warship[index] -= damage; // this is done if the above has passed (if continue has passed)
+
+        } else if (command == 'Defend'){
+            console.log('man-o-war attacks');
+        } else if (command == 'Repair') {
+            console.log('pirate ship repairs');
+        } else if (command == 'Status'){
+            console.log('print status');
+        }
+    }
     
     //for each remaining element:
     // - parse current element
@@ -28,7 +59,7 @@ function solve() {
 
     // print result
     // - sum each ship's section hp
-
+    console.log('end');
 }
 
 solve(["12>13>11>20>66", 
