@@ -21,7 +21,12 @@ function solve(input) {
         let num = Number(room[1]);
 
         if(type == 'potion') {
-            
+            if(hp + num > 100){
+                num = 100 - hp;
+            }
+            hp += num;
+            console.log(`You healed for ${num} hp.`);
+            console.log(`Current health: ${hp} hp.`);
         } else if (type == 'chest') {
             loot += num;
             console.log(`You found ${num} bitcoins.`);
@@ -43,5 +48,5 @@ function solve(input) {
     console.log(`Health: ${hp}`);
 }
 
-solve('rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000');
-solve('cat 10|potion 30|orc 10|chest 10|snake 25|chest 110');
+// solve('rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000');
+// solve('cat 10|potion 30|orc 10|chest 10|snake 25|chest 110');
