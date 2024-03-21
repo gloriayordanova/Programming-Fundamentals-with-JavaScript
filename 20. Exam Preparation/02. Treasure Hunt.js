@@ -24,16 +24,29 @@ function treasureHunt(arr){
 
         command = arr.shift();
     }
+
+    if(loot.length == 0){
+        console.log('Failed treasure hunt.');
+    } else {
+    let totalGain = 0;
+
+    for(let item of loot){
+        totalGain += item.length;
+    }
+
+    let avgGain = totalGain / loot.length;
+    console.log(`Average treasure gain: ${avgGain.toFixed(2)} pirate credits.`);
+    }
 }
 
-treasureHunt([
-    "Gold|Silver|Bronze|Medallion|Cup",
-    "Loot Wood Gold Coins",
-    "Loot Silver Pistol",
-    "Drop 3",
-    "Steal 3",
-    "Yohoho!"
-]);
+// treasureHunt([
+//     "Gold|Silver|Bronze|Medallion|Cup",
+//     "Loot Wood Gold Coins",
+//     "Loot Silver Pistol",
+//     "Drop 3",
+//     "Steal 3",
+//     "Yohoho!"
+// ]);
 
 // treasureHunt([
 //     "Diamonds|Silver|Shotgun|Gold", 
