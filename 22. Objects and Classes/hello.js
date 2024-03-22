@@ -16,7 +16,7 @@ let peter = {
     age:20,
     height:183
 };
-printDetails(peter);
+printDetails(peter); //we write that afetr we write the function below
 //and an example is given that instead of adding every individual element lile name, age etc, we can write a function looking like:
 function printDetails(person) {
     person.age = 21 //if we want to change a fugure e.g. from 20 to 21 in that case
@@ -34,4 +34,4 @@ let peter = {
 console.log(peter); 
 peter.hairColor = 'brown';
 console.log(peter); 
-console.log(peter['name']); 
+console.log(peter['name']); //or this could be done as let propName ='name'; console.log(peter[propName];)
