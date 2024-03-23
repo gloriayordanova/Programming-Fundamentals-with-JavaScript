@@ -35,3 +35,29 @@ console.log(peter);
 peter.hairColor = 'brown';
 console.log(peter); 
 console.log(peter['name']); //or this could be done as let propName ='name'; console.log(peter[propName];)
+
+
+
+//Functions within a JavaScript object are called methods
+//We can define methods using several syntaxes
+let person = {
+    sayHello: function() {
+        console.log('Hi, guys');
+    }
+}
+
+
+
+//Functions within a JavaScript object are called methods
+//We can define methods using several syntaxes
+let person = {
+    sayHello(){
+        console.log('Hi, guys');
+    }
+}
+
+
+
+//We can add a method to an already defined object
+let person = {name:'Peter', age: 20};
+person.sayHello = () => console.log('Hi, guys');
