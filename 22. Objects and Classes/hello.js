@@ -106,3 +106,60 @@ peter.sayHello = () => {
 
 peter.name;
 peter.sayHello();
+
+
+
+//We can add a method to an already defined object, some examples
+let peter = {
+    name: 'Peter',
+    age: 20,
+    sayHello: () => {
+        console.log('Hello');
+    }
+};
+
+peter.name;
+peter.sayHello();
+
+
+
+//We can add a method to an already defined object, some examples
+let peter = {
+    name: 'Peter',
+    age: 20,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+peter.name;
+peter.sayHello();
+
+
+
+//some examples with Object.keys
+let peter = {
+    name: 'Peter',
+    age: 20,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+let keys = Object.keys(peter);  
+console.log(keys);  //try printing the result to see what you will get //if we do e.g. console.log(keys[0]) only name will be printed
+console.log(peter[keys[0]]); //when printing the result you will get Peter
+
+
+
+//some examples with Object.values
+let peter = {
+    name: 'Peter',
+    age: 20,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+let values = Object.values(peter);  //try printing the result to see what you will get
+console.log(values);  //if we do e.g. console.log(keys[0]) only name will be printed
