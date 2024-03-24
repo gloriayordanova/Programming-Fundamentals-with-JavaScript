@@ -61,3 +61,33 @@ let person = {
 //We can add a method to an already defined object
 let person = {name:'Peter', age: 20};
 person.sayHello = () => console.log('Hi, guys');
+
+
+
+//We can add a method to an already defined object, some examples
+let peter = {
+    name: 'Peter',
+    age: 20,
+    height: 183,
+    sayHello: function() {
+        console.log('Hello!');
+    }
+};
+
+peter.name;
+peter.sayHello();
+
+
+
+//We can add a method to an already defined object, some examples
+let peter = {
+    name: 'Peter',
+    age: 20
+};
+
+peter.sayHello = function () {
+    console.log('Hello');
+}
+
+peter.name;
+peter.sayHello();
