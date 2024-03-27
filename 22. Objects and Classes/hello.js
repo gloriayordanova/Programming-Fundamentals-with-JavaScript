@@ -163,3 +163,41 @@ let peter = {
 
 let values = Object.values(peter);  //try printing the result to see what you will get
 console.log(values);  //if we do e.g. console.log(keys[0]) only name will be printed
+
+
+
+
+let peter = {
+    name: 'Peter',
+    age: 20,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+let entries = Object.entries(peter); 
+console.log(entries);  //or if do console.log(entries[0]), I will get just [ 'name', 'Peter' ]; if I do console.log(entries[0][0]), I will just get the key name; if I do console.log(entries[0][1]), I will just get the value Peter;
+//it will print a !!!!!! matrix
+// [
+// [ 'name', 'Peter' ],
+// [ 'age', 20 ],
+// [ 'height', 183 ],
+// [ 'sayHello', [Function: sayHello ]]
+// ]
+
+
+
+let peter = {
+    name: 'Peter',
+    age: 20,
+    height: 183,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+let keys = Object.keys(peter); 
+
+for (let key of keys) {
+    console.log(key, '->', peter[key]);
+}
