@@ -201,3 +201,23 @@ let keys = Object.keys(peter);
 for (let key of keys) {
     console.log(key, '->', peter[key]);
 }
+
+
+
+//here an example of for in
+let peter = {
+    name: 'Peter',
+    age: 20,
+    height: 183,
+    sayHello() {
+        console.log('Hello');
+    }
+};
+
+for (let key of Object.keys(peter)) {
+    console.log(key, '->', peter[key]);
+}
+
+for (let key in peter) {
+    console.log(key, '->', peter[key]);
+}
