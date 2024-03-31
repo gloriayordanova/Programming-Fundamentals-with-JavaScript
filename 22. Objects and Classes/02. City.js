@@ -8,6 +8,7 @@ function solve(city) {
 
 
 
+/*
 //another way of summarising it
 function solve(city) {
     for(let key of Object.keys(city)) {
@@ -36,6 +37,20 @@ function solve(city) {
     };
 
 }
+
+
+
+//another way of doing it, not the best solution
+function solve(city) {
+    for(let [key, value] of Object.entries(city)) {  //this [key, value] example is called deconstruction and in that case object.entries will give us an array. And we are basically saying e.g. 1st key put it under key, 2nd value put it under value e.g. name put it under key, Sofia put it under value
+        // if we do console.log(entry) we will get e.g. 
+        // [ 'name', 'Sofia' ]   
+        // [ 'area', 492 ] etc
+        console.log(key, '->', value);
+    };
+
+}
+/*
 
 
 // city ({
