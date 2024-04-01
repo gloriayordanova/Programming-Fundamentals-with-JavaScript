@@ -298,4 +298,4 @@ parsed.name = 'George';
 let encoded = JSON.stringify(parsed);
 
 console.log(encoded);
-console.log(muJson); // note here when printed this will not affect myJson, because it is a string, so it is immutable
+console.log(myJson); // note here when printed this will not affect myJson, because it is a string, so it is immutable
