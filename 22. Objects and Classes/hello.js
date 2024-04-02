@@ -299,3 +299,46 @@ let encoded = JSON.stringify(parsed);
 
 console.log(encoded);
 console.log(myJson); // note here when printed this will not affect myJson, because it is a string, so it is immutable
+
+
+
+//What are classes -> they are templates for creating objects
+
+
+
+//using Class and Constructor and This
+class Student {
+    constructor(name, grade) {
+        this.name = name;   //"this" points out to the instance that will be created
+        this.grade = grade;
+    }
+}
+//example how Class and Constructor and This work
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+let myPerson = new Person('Peter', 23); // please note here we should put new in order to work
+console.log(myPerson);
+
+//another way to do exactly the same thing, but with a function, but not with Class and Constructor and This
+function createPerson(name, age) {
+    let result = {};
+    
+    result.name = name;
+    result.age = age;
+
+    return result;
+}
+
+let myPerson = new Person('Peter', 23);
+
+console.log(myPerson); // it will print (GY: not sure why it is not working when printing, but it willl print) Person { name: 'Peter', age: 23 }
+
+let otherPerson = createPerson('George', 31);
+
+console.log(otherPerson);  // it will print (GY: not sure why it is not working when printing, but it willl print) {name: 'George', age: 31}
