@@ -325,7 +325,17 @@ class Person {
 let myPerson = new Person('Peter', 23); // please note here we should put new in order to work
 console.log(myPerson);
 
+
+
+
 //another way to do exactly the same thing, but with a function, but not with Class and Constructor and This
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
 function createPerson(name, age) {
     let result = {};
     
@@ -335,10 +345,131 @@ function createPerson(name, age) {
     return result;
 }
 
-let myPerson = new Person('Peter', 23);
+let myPerson = new Person('Peter', 23); 
 
 console.log(myPerson); // it will print (GY: not sure why it is not working when printing, but it willl print) Person { name: 'Peter', age: 23 }
 
 let otherPerson = createPerson('George', 31);
 
 console.log(otherPerson);  // it will print (GY: not sure why it is not working when printing, but it willl print) {name: 'George', age: 31}
+
+
+
+//not that important info, but just showing 
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+function createPerson(name, age) {
+    let result = {};
+    
+    result.name = name;
+    result.age = age;
+
+    return result;
+}
+
+let myPerson = new Person('Peter', 23); 
+
+console.log(typeof myPerson); // here it will print Object on the Debug Console
+
+let otherPerson = createPerson('George', 31);
+
+console.log(typeof otherPerson); // here it will print Object on the Debug Console
+
+
+
+//not that important info, but just showing 
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+function createPerson(name, age) {
+    let result = {};
+    
+    result.name = name;
+    result.age = age;
+
+    return result;
+}
+
+let myPerson = new Person('Peter', 23); 
+
+console.log(myPerson instanceof Person); // here it will print trur on the Debug Console, (also it won't only tell us the type which is object, but will telll us where that data came from, we can check if the data is from a particular type)
+
+let otherPerson = createPerson('George', 31);
+
+console.log(otherPerson instanceof Person); // here it will print false on the Debug Console, (also it won't only tell us the type which is object, but will telll us where that data came from, we can check if the data is from a particular type)
+
+
+
+// now some Classes examples
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+
+let myPerson = new Person('Peter', 23); 
+let otherPerson = new Person('George', 31);
+
+console.log(myPerson); 
+console.log(otherPerson);
+myPerson.age = 22;
+console.log(myPerson); 
+console.log(otherPerson);
+
+
+
+//what we can also do in that Person is to define methods (see that sayHello)
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHello() {  //note it will be wrong here if we do it that way sayHello: function () { etc
+        console.log('Hello!');
+    }
+}
+
+
+let myPerson = new Person('Peter', 23); 
+let otherPerson = new Person('George', 31);
+
+console.log(myPerson); 
+console.log(otherPerson);
+
+myPerson.sayHello();
+
+
+
+//aonther example
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHello(/*this*/) { //this is as if we imaging there is this inside that
+        console.log(`${this.name} says hello!`);
+    }
+}
+
+
+let myPerson = new Person('Peter', 23); 
+let otherPerson = new Person('George', 31);
+
+console.log(myPerson); 
+console.log(otherPerson);
+
+myPerson.sayHello();
+otherPerson.sayHello();
