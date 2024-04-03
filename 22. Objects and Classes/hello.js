@@ -308,7 +308,7 @@ console.log(myJson); // note here when printed this will not affect myJson, beca
 
 //using Class and Constructor and This
 class Student {
-    constructor(name, grade) {
+    constructor(name, grade) { //note, there are cases where we usually can have constructor where there is nothing in the brackets like constructor()
         this.name = name;   //"this" points out to the instance that will be created
         this.grade = grade;
     }
@@ -473,3 +473,26 @@ console.log(otherPerson);
 
 myPerson.sayHello();
 otherPerson.sayHello();
+
+
+
+//another way of doing it using function, but not that effective as the above one
+function createPerson(name, age) {
+    let result = {}; 
+
+    result.name = name;
+    result.age = age;
+    result.sayHello = function() {  //note when we print that in the case where we use Classes, no matter if we have the sth() method it won't get prnted; however here we use funuction and if we print, this sth() method will be considered in the printing
+        console.log(`${result.name} says hello!`);
+    };
+
+    return result;
+}
+
+
+
+//just for info, what we call "инстанция", това е обект, създаден чрез клас
+
+
+
+////just for info, what is the keyword with which we create an "инстанция", the answer is new
