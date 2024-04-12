@@ -14,7 +14,7 @@ class Storage {
     getProducts() {
         return this.storage
         .map(product => JSON.stringify(product))
-        .join('\n');;
+        .join('\n');
     }
 }
 
