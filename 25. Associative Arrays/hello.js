@@ -63,3 +63,48 @@ console.log(myAssocArray);
 for(let key in myAssocArray) {
     console.log(key, '->', myAssocArray[key]);
 }
+
+
+
+let myAssocArray = {
+    ['John Smith']: '+1-555-490417',
+    ['Ana Peters']: '+1-555-813784',
+    ['Ivan Petrov']: '+1-555-420708',
+};
+
+console.log(myAssocArray);
+
+let keys = Object.keys(myAssocArray); //I think keys are e.g. ['John Smith'] 
+
+for(let key of keys) {
+    console.log(key, '->', myAssocArray[key]);
+}
+
+
+
+//the same as the above, but we can do it this way too
+let myAssocArray = {
+    ['John Smith']: '+1-555-490417',
+    ['Ana Peters']: '+1-555-813784',
+    ['Ivan Petrov']: '+1-555-420708',
+};
+
+console.log(myAssocArray);
+
+for(let key of Object.keys(myAssocArray)) {
+    console.log(key, '->', myAssocArray[key]);
+}
+
+
+
+let myAssocArray = {
+    ['John Smith']: '+1-555-490417',
+    ['Ana Peters']: '+1-555-813784',
+    ['Ivan Petrov']: '+1-555-420708',
+};
+
+console.log(myAssocArray);
+
+for(let entry of Object.entries(myAssocArray)) {  //I think entries e.g. ['John Smith']: '+1-555-490417'
+    console.log(entry[0], '->', entry[1]);
+}
