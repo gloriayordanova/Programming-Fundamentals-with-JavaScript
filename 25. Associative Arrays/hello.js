@@ -108,3 +108,29 @@ console.log(myAssocArray);
 for(let entry of Object.entries(myAssocArray)) {  //I think entries e.g. ['John Smith']: '+1-555-490417'
     console.log(entry[0], '->', entry[1]);
 }
+
+
+
+let myAssocArray = {
+    ['John Smith']: '+1-555-490417',
+    ['Ana Peters']: '+1-555-813784',
+    ['Ivan Petrov']: '+1-555-420708',
+};
+
+console.log(myAssocArray);
+
+for(let [key, value] of Object.entries(myAssocArray)) {  //I think entries e.g. ['John Smith']: '+1-555-490417'
+    console.log(key, '->', value);
+}
+
+
+
+let myObj = {
+    name: 'Peter'
+};
+
+console.log(Object.hasOwn(myObj, 'name'));
+console.log(Object.hasOwn(myObj, 'age'));
+
+console.log(Object.hasOwnProperty('name'));
+console.log(Object.hasOwnProperty('age'));
