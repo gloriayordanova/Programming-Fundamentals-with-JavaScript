@@ -134,3 +134,110 @@ console.log(Object.hasOwn(myObj, 'age'));
 
 console.log(Object.hasOwnProperty('name'));
 console.log(Object.hasOwnProperty('age'));
+
+
+
+//we can Remove entries;
+delete AssocArr['John Smith'];  //delete deletes the key and the value; if we just want to delete the value ние можем да я зададем да е равна на undefined
+
+
+
+let data = {
+    'alpha': 'Wiston',
+    'bravo': 'Sebastian',
+    'charlie': 'Monica'
+}
+//we can use delete data.bravo  //this one not that popular
+//we can use delete data['charlie']  //this one more used
+
+
+
+
+//example of delete
+let myAssocArray = {
+    ['John Smith']: '+1-555-490417',
+    ['Ana Peters']: '+1-555-813784',
+    ['Ivan Petrov']: '+1-555-420708',
+};
+
+console.log(myAssocArray);
+
+for(let [key, value] of Object.entries(myAssocArray)) {  //I think entries e.g. ['John Smith']: '+1-555-490417'
+    console.log(key, '->', value);
+}
+
+delete myAssocArray['John Smith'];
+
+console.log(myAssocArray);
+
+
+
+// if we do sth like;
+let people = {
+    John: '555-4973',
+    ['Anne-Marie']: '555-6819'     //!!!!!!!! if we have spcial symbols in the key, make sure the key is in []
+}
+
+
+
+//for in оператора е предназначен за обхождане на ключовете на обект
+//for of се ползва при обхождане на масиви
+
+
+
+let myMap = {
+    'F3A18': 'apple pie',
+    '113B5': 'meat pie',
+    'C991F': 'blueberry pie',
+};
+
+myMap['113B5'] = 'lemon pie';
+
+console.log(myMap['113B5']);
+
+
+
+let myMap = {
+    'F3A18': 'apple pie',
+    '113B5': 'meat pie',
+    'C991F': 'blueberry pie',
+};
+
+myMap['113B5'] = undefined;
+
+console.log(myMap.hasOwnProperty('113B5'));  //no matter it is undefined, it will give true
+
+
+
+//when we want to sort, filter, or map objects, usually we transform them into array in order to do so
+//FYI also, see screenshot called Sorting.JPG when we want to sort, filter, or map objects, usually we transform them into array in order to do so
+//however, we can also do sorting, filtering, or mapping of objects - e.g. when it comes to sorting it usually sorts by the way we give the keys, not by alphabetical order; however, if we have numbers it sorts numbers first e.g.. FYI JSON works in a different way with objects, sorting by ASCII
+let myObj = {};
+
+myObj.peter = '3546256';
+myObj.john = '134234';
+myObj['5'] = '365444';
+myObj['0'] = '5443521';
+myObj.ama = '145345';
+
+console.log(myObj);
+
+
+
+//not very clear, but just wanted to add the below lines from the presentation 
+//Sorting by Key
+//The Entries array can be sorted, using a Compare function
+//To sort by key, use the first element of each entry
+
+entries.sort((a, b) => {
+    keyA = a[0];
+    keyB = b[0];
+    //трябва да сравним keyA и keyB, за да може да ги сортираме
+    //ако искаме да са подреден по азбучен ред ще каже:
+    return keyA.localeCompare(keyB)  // това ще сортира масива от ентрита по азбучен ред по техните ключове
+    //и после какво може да направим да го върнем обратно в обект:
+    Object.fromEntries(/*тук подаваме вече сортирания масив*/)
+});
+//you can also destructure the entries
+entries.sort(([keyA (/* key */), valueA /* value */], [keyB, valueB]) => {
+});
