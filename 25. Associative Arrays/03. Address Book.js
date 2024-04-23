@@ -2,7 +2,7 @@ function solve(input) {
     let addressBook = {};
 
     for(let item of input) {
-        let [name, address] = item.split(':');
+        let [name, address] = item.split(':'); //here it will print as an array
 
         addressBook[name] = address;
     }
@@ -15,9 +15,19 @@ function solve(input) {
 
     //entries.sort(compare); 
 
-    entries.sort((a, b) => a[0].localeCompare(b[0]));  //we do all of these below, this (a, b) => a[0].localeCompare(b[0]) we pt at the end
+    entries.sort((a, b) => a[0].localeCompare(b[0]));  //localeCompare сортира по азбучен ред 
 
     //console.log(entries);
+
+    let sorted = {};
+
+    for(let [name, address] of entries) {
+        sorted[name] = address;
+    }
+
+    for(let [name, address] of Object.entries(sorted)) {
+        console.log(name, '->', address);
+    }
 }
 
 //function compare(a, b) {
@@ -58,3 +68,23 @@ solve(['Tim:Doe Crossing',
 // 'Peter:Huxley Rd',
 // 'Jeff:Gateway Way',
 // 'Jeff:Huxley Rd']);
+
+
+
+//useful notes about sorting with localeCompare from chatGPT:;
+
+// In JavaScript, the localeCompare() method is used to compare strings based on the current locale. This method returns a number indicating whether the reference string comes before, after, or is the same as the compare string in sort order.
+
+// Here's how localeCompare() works:
+
+// If the reference string comes before the compare string in sort order, it returns a negative number (typically -1).
+// If the reference string comes after the compare string in sort order, it returns a positive number (typically 1).
+// If the two strings are equivalent in sort order, it returns 0.
+// Here's an example:
+
+// let str1 = "apple";
+// let str2 = "banana";
+
+// console.log(str1.localeCompare(str2)); // Output will be a negative number (-1) because "apple" comes before "banana" in alphabetical order.
+
+// You can also specify an optional parameter to customize the locale and comparison options. If no options are provided, the comparison is made based on the language settings of the user's environment.

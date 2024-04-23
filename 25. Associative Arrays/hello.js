@@ -236,7 +236,7 @@ entries.sort((a, b) => {
     //ако искаме да са подреден по азбучен ред ще каже:
     return keyA.localeCompare(keyB)  // това ще сортира масива от ентрита по азбучен ред по техните ключове
     //и после какво може да направим да го върнем обратно в обект:
-    Object.fromEntries(/*тук подаваме вече сортирания масив*/)
+    Object.fromEntries(/*тук подаваме вече сортирания масив*/) //Object.fromEntries() е динамичен метод за създаване на обект
 });
 //you can also destructure the entries
 entries.sort(([keyA (/* key */), valueA /* value */], [keyB, valueB]) => {
