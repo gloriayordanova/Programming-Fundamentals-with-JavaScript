@@ -258,3 +258,41 @@ const { a, b } = obj;
 //is equivalent to:
 // const a = obj.a;
 // const b = obj.b;
+
+
+
+//example for destructuring
+let myObj = {
+    name: 'Peter'
+};
+
+myObj.name = 'John';
+
+let { name } = myObj; //example for destructuring
+console.log(name); //example for destructuring
+
+
+
+//Sort by key
+entries.sort((a, b) => {
+    valueA = a[0]; // notice when sorting by key we use the first element
+    valueB = b[0]; // notice when sorting by key we use the first element
+    //Perform comparison and return negative, 0 or positive
+});
+
+//you can also destructure the entries
+entries.sort(([keyA, valueA], [keyB, valueB]) => {
+});
+
+
+
+//Sort by value
+entries.sort((a, b) => {
+    valueA = a[1]; // notice when sorting by key we use the second element
+    valueB = b[1]; // notice when sorting by key we use the second element
+    //Perform comparison and return negative, 0 or positive
+});
+
+//you can also destructure the entries
+entries.sort(([keyA, valueA], [keyB, valueB]) => {
+});
