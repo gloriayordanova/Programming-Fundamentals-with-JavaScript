@@ -279,7 +279,6 @@ entries.sort((a, b) => {
     valueB = b[0]; // notice when sorting by key we use the first element
     //Perform comparison and return negative, 0 or positive
 });
-
 //you can also destructure the entries
 entries.sort(([keyA, valueA], [keyB, valueB]) => {
 });
@@ -292,7 +291,16 @@ entries.sort((a, b) => {
     valueB = b[1]; // notice when sorting by key we use the second element
     //Perform comparison and return negative, 0 or positive
 });
-
 //you can also destructure the entries
 entries.sort(([keyA, valueA], [keyB, valueB]) => {
 });
+
+
+
+// Set(), Set() is used for Storing Unique Elements  //представете си го като масив за съхраняване на уникални стойности
+let set = new Set([1, 2, 2, 4, 5]);
+// Set(4) {1, 2, 4, 5}
+set.add(7); //Add value, тази стойност 7 ще влезе там само ако я няма, ако я има няма да влезе
+console.log(set.has(1)); //Expected output: true
+//FYI set doesn't have indexing, because set doesn't have keys, в него можем само да проверяваме дали нещо го има или няма
+//FYI може и да обхождаме (итерираме) set-a (set and map (in arrays), can' make them in JSON we should change them to array. whereas with objects we can make them into JSON)
