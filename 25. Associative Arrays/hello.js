@@ -303,4 +303,25 @@ let set = new Set([1, 2, 2, 4, 5]);
 set.add(7); //Add value, тази стойност 7 ще влезе там само ако я няма, ако я има няма да влезе
 console.log(set.has(1)); //Expected output: true
 //FYI set doesn't have indexing, because set doesn't have keys, в него можем само да проверяваме дали нещо го има или няма
-//FYI може и да обхождаме (итерираме) set-a (set and map (in arrays), can' make them in JSON we should change them to array. whereas with objects we can make them into JSON)
+//FYI може и да обхождаме (итерираме) set-a (set and map (in arrays), can't make them in JSON we should change them to array. whereas with objects we can make them into JSON)
+
+
+
+//some examples with Set
+let mySet = new Set();
+
+console.log(mySet.size); //if I just console.log(mySet) it will print Set(0) {size: 0}
+
+mySet.add(5);
+
+console.log(mySet.size); //if I just console.log(mySet) it will print Set(1) {size: 1, 5}
+
+mySet.add(3);
+mySet.add(5);
+console.log(mySet.size); //if I just console.log(mySet) it will print Set(2) {size: 2, 5, 3}
+
+mySet.delete(3);   //if we do console.log(mySet.delete(3)); it will print true връща true ако елементът е изтрит
+
+console.log(mySet); //if I just console.log(mySet) it will print Set(1) {size: 1, 5}
+mySet.delete(3); //here nothing will happen
+console.log(mySet.delete(3)); //here it will return false ако не еизтрило нищо, ако елементът не е съществувал
