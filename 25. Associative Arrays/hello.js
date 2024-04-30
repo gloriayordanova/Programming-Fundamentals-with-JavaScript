@@ -302,7 +302,7 @@ let set = new Set([1, 2, 2, 4, 5]);
 // Set(4) {1, 2, 4, 5}
 set.add(7); //Add value, тази стойност 7 ще влезе там само ако я няма, ако я има няма да влезе
 console.log(set.has(1)); //Expected output: true
-//FYI set doesn't have indexing, because set doesn't have keys, в него можем само да проверяваме дали нещо го има или няма
+//FYI set doesn't have indexing and we can't sort it, because set doesn't have keys, в него можем само да проверяваме дали нещо го има или няма
 //FYI може и да обхождаме (итерираме) set-a (set and map (in arrays), can't make them in JSON we should change them to array. whereas with objects we can make them into JSON)
 
 
@@ -325,3 +325,44 @@ mySet.delete(3);   //if we do console.log(mySet.delete(3)); it will print true �
 console.log(mySet); //if I just console.log(mySet) it will print Set(1) {size: 1, 5}
 mySet.delete(3); //here nothing will happen
 console.log(mySet.delete(3)); //here it will return false ако не еизтрило нищо, ако елементът не е съществувал
+
+
+
+let mySet = new Set();
+
+console.log(mySet);
+
+mySet.add(5);
+mySet.add(3);
+mySet.add(5);
+
+for(let entry of mySet) {  // whether we do for(let entry of mySet.keys()) or for(let entry of mySet.values()) it will return the same thing as the console log; if we do for(let entry of mySet.entries())it will return e.g. [ 5, 5 ] [ 3, 3 ] which means the key and the value is the same, because set doesn't have keys  
+    console.log(entry);
+}
+
+
+
+//here just for info, not part of this lecture. Map looks very much the same as Set
+let myMap = new Map();
+
+console.log(myMap);
+
+myMap.set('Peter', '1-6882-5555');
+myMap.set('John', '1-4478-1451');
+
+console.log(myMap);  //различава се от обекта затова не може да го индексираме по този начин console.log(myMap['Peter']) because it will return undefined
+//индексирането става с get 
+console.log(myMap.get('Peter')); //и връща стойността, която седи след Peter e.g. телефонния номер
+//console.log(myMap.has('Peter')); returns truе or false, in that case returns true
+
+for(let entry of myMap) {
+    console.log(entry);  // it will print ['Peter', '1-6882-5555'] ['John', '1-4478-1451'], което значи ако имаме тези неща можем да направим обекти от тях
+}
+
+//map-a и object може да ги ползваме по един и същи начин с много малки разлики;
+// 1 e.g. map-а винаги пази insertion order(няма значение какъв е типът на ключа), нямаме тези специални условия за обекта ако ключа е числов го слагаме най-отпред и ги сортира по големина;
+// 2 ключът може да е всякакъв тип, а при обекта ключът винаги е string
+
+console.log(myMap.keys());
+console.log(myMap.entries());
+console.log(JSON.stringify(myMap)); // it will return празен обект {} 
