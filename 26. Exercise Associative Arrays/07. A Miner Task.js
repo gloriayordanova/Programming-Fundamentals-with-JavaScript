@@ -15,11 +15,11 @@ function minerTask(arr) {
     //не можем директно да сортираме object, не само да сортираме, а и да итерираме през него
     //затова за да итерираме взимаме неговите entries
 
-    let entries = Object.entries((resources));
+    let entries = Object.entries(resources);
     //console.log(entries);  //it will print e.g. [ [ 'Gold', 155 ], [ 'Silver', 10 ], [ 'Copper', 17 ] ]//това ще трябва да го изпълним през терминала, за да видим какво показва e,g, type in the terminal "node 07.A Miner Task.js" 
 
     // for(let entry of entries) {
-    //     // console.log(entry); // e.g. here will print
+    //     // conso le.log(entry); // e.g. here will print
     //     //[ 'Gold', 155 ]
     //     //[ 'Silver', 10 ]
     //     //[ 'Copper', 17 ]
