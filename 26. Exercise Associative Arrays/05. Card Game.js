@@ -4,8 +4,8 @@ function cardGame(arr) {
     let playersCards = {};  //this will include name and cards
 
     for(let playerDeck of arr) {
-        //console.log(playerDeck);  //it will print Peter: 2C, 4H, 9H, AS, QS     Tomas: 3H, 10S, JC, KD, 5S, 10S  etc
-    }
+        //console.log(playerDeck);  //it will print Peter: 2C, 4H, 9H, AS, QS     Tomas: 3H, 10S, JC, KD, 5S, 10S  etc.
+    } 
 }
 
 cardGame([
