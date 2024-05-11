@@ -16,7 +16,7 @@ function cardGame(arr) {
         //console.log(cards);  // [ '2C', '4H', '9H', 'AS', 'QS' ]
 
         if(playerName in playersCards) {
-            playersCards[playerName].push(...cards); //this is if we want to add more cards for e.g. Peter //това със спреад оператора буквално казва разбий масива на отделни елементи и пушни всичко, което го има в този масив като отделни елементи
+            playersCards[playerName].push(...cards); //this is if we want to add more cards for e.g. Peter //това със спреад оператора (...) буквално казва разбий масива на отделни елементи и пушни всичко, което го има в този масив като отделни елементи
         } else {
             playersCards[playerName] = cards;
         }
@@ -77,14 +77,14 @@ function cardGame(arr) {
 
 }
 
-// cardGame([
-//     'Peter: 2C, 4H, 9H, AS, QS',
-//     'Tomas: 3H, 10S, JC, KD, 5S, 10S',
-//     'Andrea: QH, QC, QS, QD',
-//     'Tomas: 6H, 7S, KC, KD, 5S, 10C',
-//     'Andrea: QH, QC, JS, JD, JC',
-//     'Peter: JD, JD, JD, JD, JD, JD'
-// ]);
+cardGame([
+    'Peter: 2C, 4H, 9H, AS, QS',
+    'Tomas: 3H, 10S, JC, KD, 5S, 10S',
+    'Andrea: QH, QC, QS, QD',
+    'Tomas: 6H, 7S, KC, KD, 5S, 10C',
+    'Andrea: QH, QC, JS, JD, JC',
+    'Peter: JD, JD, JD, JD, JD, JD'
+]);
 
 // cardGame([
 //     'John: 2C, 4H, 9H, AS, QS',
