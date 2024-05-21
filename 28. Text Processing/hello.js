@@ -78,3 +78,35 @@ let text = "Hello, john@softuni.bg, you have been using john@softuni.bg in you r
 let replacedText = text.replace(".bg", ".com");
 console.log(replacedText); 
 //"Hello, john@softuni.com, you have been using john@softuni.bg in you registration.";
+
+
+
+//split(separator)  //opposite to split is join
+let text = "I love fruits";
+let words = text.split(' '); 
+console.log(words); //Expected output: ['I', 'love', 'fruits']
+// as above example, //here we can do it as empty (' '), but we can also do it by giving a whole word и което можем да правим ако не е емпти е да заменим всички съвпадения с дадена дума без да ползваме регекси/цикли/replaceAll
+let str = 'hello world hello';
+console.log(str.split('l')); //Expected output: ['he', '', 'o wor', 'd he', '', 'o']
+console.log(str.split('l')); //Expected output: ['he', 'o world he', 'o']
+
+
+
+//opposite to split is join
+let str = 'hello world hello';
+console.log(str.split('ll').join('tt'));  //Expected output: hetto world hetto
+
+
+
+//includes(substr)  //indexOf is identical, but instead of giving us True or False, it will tell us where exactly it is located, like which element and it will return us a number
+let text = "I love fruits.";
+console.log(text.includes("fruits")); //Expected output: True
+console.log(text.includes("banana")); //Expected output: False
+
+
+
+//repeat(count) - Creates a new string repeated count times
+let n = 3;
+for(let i = 1; i <= n; i++) {
+    console.log('*'.repeat(i));
+}
