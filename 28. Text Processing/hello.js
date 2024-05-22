@@ -110,3 +110,49 @@ let n = 3;
 for(let i = 1; i <= n; i++) {
     console.log('*'.repeat(i));
 }
+
+
+
+let name = 'John';
+name[0] = 'R';
+console.log(name); //Expected Output is John (because strings are immutable или непроменими)
+
+
+
+//for of раоти със стрингове или масиви и ще гръмне ако n му подадем число i ще каже n is not iterrable, затова примера долу е невалиден;
+for (let row of n) {
+    console.log('*'.repeat(n));
+}
+
+
+
+//как може да преброим колко пъти се среща дума в един текст?
+let str = 'hello world hello';
+//console.log(str.split('ll').length); it will be printed 3 (because it splits tbat and leaves ll only in that case it is seen twice)
+console.log(str.split('ll').length - 1);  //when we add -1 it will work that way
+
+
+
+//trim()
+//use trim() method to remove whitespaces(spaces, tabs, no-break space, etc.) from both ends of a string
+let text = "      Annoying spaces        ";
+console.log(text.trim()); //Expected output: "Annoying spaces"
+
+//user trimStart() or trimEnd() to remove whitespaces only at the beginning or at the end
+let text = "      Annoying spaces        ";
+text = text.trimStart(); text = text.trimEnd();
+console.log(text); //Expected output: "Annoying spaces"
+
+
+
+//Starts With/Ends With  //similar to includes but with these we say if sth exists in the beginning or at the end
+let text = "My name is John";
+console.log(text.startsWith('My'));  //Expected putput: true  //it works as well if we just take not the whole words, but just a letter/letters
+
+let text = "My name is John";
+console.log(text.endsWith('John'));  //Expected putput: true  //it works as well if we just take not the whole words, but just a letter/letters
+
+//here he gives and example
+let text = 'hello world helllo';
+console.log(str.includes('he'));  //Expected putput: true
+console.log(str.slice(0, 3) == 'hel');  //Expected putput: true
