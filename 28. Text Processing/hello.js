@@ -156,3 +156,31 @@ console.log(text.endsWith('John'));  //Expected putput: true  //it works as well
 let text = 'hello world helllo';
 console.log(str.includes('he'));  //Expected putput: true
 console.log(str.slice(0, 3) == 'hel');  //Expected putput: true
+
+
+
+//padStart(); used to add to the current string another substring at the start until length is reached
+let text = "010";
+console.log(text.padStart(8, '0'));  //Expected putput: 00000010
+
+//padEnd(); used to add to the current string another substring at the end until a length is reached
+let sentence = "He passed away";
+console.log(sentence.padEnd(20, '.')); //Expected putput: He passed away......
+
+//example of padEnd
+let str = 'hello';
+console.log(str.padEnd(10, '*-')); //Expected putput: hello*-*-*
+
+
+
+//какво значи literal?
+e.g. 6 това е начин да кажем на системата, че това е число
+e.g. '6' това е начин да кажем на системата, че това е стринг
+други подобни примери за обект, масив etc. 
+
+
+
+//не е свързано с тази тема но въпрос за какво използваме асоциативен масив?
+отговор: за съхраняване на данни, които искаме да асоциираме и са от един тип -> няма разлика от нормален обект, но по конвенция не слагаме разнотипли данни за ключовете, както при нормален обект
+например 10 поръчки за 10 клиента -> може да направим асоциативен масив за тази информация (или телефонен указател -> име: номер на името)
+лектора каза използваме асоциативен масив всеки път, когато искаме да имаме индекс различен от число. Като имаме някакви данни , които ги взимаме от база данни  обикновено ще искаме да вземем оригиналното ID на обекта, а не нуе да правим някакви числови индекси и после да се чудим как да ги намерим
