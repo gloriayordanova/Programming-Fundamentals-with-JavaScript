@@ -4,7 +4,7 @@ function furniture(arr) {
     let items = [];
     let totalPrice = 0;
 
-    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<price>\d+\.?\d*)!(?<qty>\d+)/; // .\ това с точката ще вземе всеки символ, затова слагаме \ преди точката което значи да го искейпнем и да вземем конкретно точка като знак; // \d* значи може да имаме още цифри нула или повече
+    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<price>\d+\.?\d*)!(?<qty>\d+)/; // .\ това с точката ще вземе всеки символ, затова слагаме \ преди точката което значи да го искейпнем и да вземем конкретно точка като знак; //тук не пишеm g или gm в края, защото g и gm се ползват когато търсим повече от едно съвпадение, а тук не търсим повече от едно съвпадение в тази конкретна задача
 
     let command = arr.shift();
 
@@ -24,36 +24,45 @@ function furniture(arr) {
             // console.log(price); //312.23
             // console.log(qty); //3
 
-            let totalPrice = Number(qty) * Number(price);
+            let furniturePrice = Number(qty) * Number(price);
 
             items.push(name);
+            totalPrice += furniturePrice;
         }
 
         command = arr.shift();
     }
+
+    console.log('Bought furniture:');
+
+    if(items.length > 0) {
+        console.log(items.join('\n'));
+    }
+
+    console.log(`Total money spend: ${totalPrice.toFixed(2)}`);
 }
 
-furniture([
-    '>>Sofa<<312.23!3',
-    '>>TV<<300!5',
-    '>Invalid<<!5', //fyi it will be invalid, затова получваме null, защото той не отговаря на нашите критерии
-    'Purchase'
-]);
+// furniture([
+//     '>>Sofa<<312.23!3',
+//     '>>TV<<300!5',
+//     '>Invalid<<!5', //fyi it will be invalid, затова получваме null, защото той не отговаря на нашите критерии
+//     'Purchase'
+// ]);
 
-furniture([
-    '>>Laptop<<312.2323!3',
-    '>>TV<<300.21314!5',
-    '>Invalid<<!5',
-    '>>TV<<300.21314!20',
-    '>>Invalid<!5',
-    '>>TV<<30.21314!5',
-    '>>Invalid<<!!5',
-    'Purchase'
-]);
+// furniture([
+//     '>>Laptop<<312.2323!3',
+//     '>>TV<<300.21314!5',
+//     '>Invalid<<!5',
+//     '>>TV<<300.21314!20',
+//     '>>Invalid<!5',
+//     '>>TV<<30.21314!5',
+//     '>>Invalid<<!!5',
+//     'Purchase'
+// ]);
 
-furniture([
-    '>Invalid<<!4', 
-    '>Invalid<<!2', 
-    '>Invalid<<!5', 
-    'Purchase'
-]);
+// furniture([
+//     '>Invalid<<!4', 
+//     '>Invalid<<!2', 
+//     '>Invalid<<!5', 
+//     'Purchase'
+// ]);
